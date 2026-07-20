@@ -17,3 +17,7 @@ SS，HTTP，HTTPS，TLS，VLESS，VMESS，TROJAN，TUIC，HYSTERIA等
 **支持一切常见企业组网协议如：**
 
 WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L2TP，VXLAN，Tailscale等。
+
+**Q3：Mieru一键脚本**
+
+[https://github.com/ike-sh/mieru-OneClick](https://github.com/ike-sh/mieru-OneClick)
