@@ -20,4 +20,7 @@ WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L
 
 **Q3：Mieru一键脚本**
 
-[https://github.com/ike-sh/mieru-OneClick](https://github.com/ike-sh/mieru-OneClick)
+{% embed url="https://github.com/ike-sh/mieru-OneClick" %}
+
+**Q4：当然你也可以用SSH 隧道使用我们CM款机器，具体怎么用自行谷歌**
+
