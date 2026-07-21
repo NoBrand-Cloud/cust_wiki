@@ -24,3 +24,7 @@ WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L
 
 **Q4：当然你也可以用SSH 隧道使用我们CM款机器，具体怎么用自行谷歌**
 
+**Q5： 部分地区联通客户SSH连不上，请开工单处理，我们会给您开VNC然后运行脚本即可使用了。后续管理也是VNC即可。**
+
+**Q6：Mieru脚本生成的配置导入时候可能端口号会错误，请注意检查端口号。**
+
