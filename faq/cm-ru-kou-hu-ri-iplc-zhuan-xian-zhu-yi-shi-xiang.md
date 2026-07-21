@@ -1,4 +1,4 @@
-# CM入口沪日IPLC专线注意事项
+# 沪日IPLC专线注意事项
 
 **Q1: 移动v4可用地区和运营商？**
 
@@ -27,4 +27,16 @@ WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L
 **Q5： 部分地区联通客户SSH连不上，请开工单处理，我们会给您开VNC然后运行脚本即可使用了。后续管理也是VNC即可。**
 
 **Q6：Mieru脚本生成的配置导入时候可能端口号会错误，请注意检查端口号。**
+
+**Q7: 如何关闭IPv6？**
+
+```
+cat >/etc/sysctl.d/99-disable-ipv6.conf <<'EOF'
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+EOF
+```
+
+输入上述指令后重启您的机器即可。
 
