@@ -34,7 +34,7 @@ WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L
 
 **Q6：Mieru脚本生成的配置导入时候可能端口号会错误，请注意检查端口号。**
 
-**Q7：如何关闭IPv6？**
+### **Q7：如果IPv6出口觉得不好用，如何关闭IPv6？**
 
 ```
 cat >/etc/sysctl.d/99-disable-ipv6.conf <<'EOF'
