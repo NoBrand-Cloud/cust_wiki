@@ -28,7 +28,7 @@ WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L
 
 **Q4：当然你也可以用SSH 隧道使用我们CM款机器，具体怎么用自行谷歌**
 
-**Q6：如果SSH连接不上，可能是你没有省白，您在省白添加北京地区即可使用。**
+**Q5：如果SSH连接不上，可能是你没有省白，您在省白添加北京地区即可使用。**
 
 如果添加后仍不行且您是联通，请开工单处理，我们会给您开VNC然后运行脚本即可使用了，后续管理也是VNC即可，您的运营商ban了ssh。
 
