@@ -6,6 +6,6 @@
   * [IX入口常见问题](faq/ix-ru-kou-chang-jian-wen-ti.md)
   * [SSH密钥登陆教程](SSH/README.MD)
   * [常见可用客户端列表](faq/chang-jian-ke-yong-ke-hu-duan-lie-biao.md)
-  * [常见可用客户端列表](MIERU/README.MD)
+  * [Mieru教程](MIERU/README.MD)
 * [使用条款](Legal/README.md)
 * [NB更新日志](nb-geng-xin-ri-zhi.md)
