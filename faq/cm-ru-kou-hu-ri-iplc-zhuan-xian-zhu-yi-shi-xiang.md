@@ -51,8 +51,20 @@ sysctl --system
 
 **Q8：SSH隧道？**
 
-1. 新创建一个SSH密钥对, 和你登录用的不一样
-2. 在机器上上创建专用用户 tunnel
+1. 新创建一个SSH密钥对, 和你登录用的不一样,为了与正常登录用户隔离
+
+> [!IMPORTANT]
+>
+>请一定要自己生成SSH密钥对，不要直接使用下面的密钥
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+然后一路回车
+再执行`cat ~/.ssh/id_ed25519`查看私钥，执行`cat ~/.ssh/id_ed25519.pub`查看公钥
+<img width="1287" height="947" alt="image" src="https://github.com/user-attachments/assets/68e6993f-bfca-4b57-9a09-ae71e488356d" />
+
+2. 在机器上上创建SSH隧道专用用户 `tunnel`
 
 ```
 useradd -m -s /usr/sbin/nologin tunnel
@@ -75,3 +87,37 @@ EOF
 4. 重启 ssh
 
 `sudo systemctl restart ssh`
+
+5. 获取 host-key
+
+```
+cat /etc/ssh/ssh_host_ed25519_key.pub
+```
+
+只使用`ssh-ed25519 xxxxxxx`这一部分，后面的`root@nbnet-3608`不用复制
+示例：<img width="1087" height="132" alt="image" src="https://github.com/user-attachments/assets/d3a4b787-4918-488b-9c2d-6aef0af2f905" />
+
+6. 拼接配置
+以 mihomo 为例，建议把你生成的SSH密钥和下面的mihomo配置格式一起丢给AI让他给你拼接
+```
+proxies:
+  - name: "JP-NoBrand-IPLC"
+    type: ssh
+    server: 你的移动入口IP
+    port: 输入你的SSH端口
+    username: tunnel  #如果没修改过就不用改
+    # 下面输入你的私钥，需要注意有缩进，建议让AI帮你替换
+    private-key: |
+      -----BEGIN OPENSSH PRIVATE KEY-----
+      b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+      QyNTUxOQAAACBXkiLbL/fu4tY+BbzB1Q5qstjL7qxut/mO/tVDtqzvWwAAAKDDtRJ7w7US
+      ewAAAAtzc2gtZWQyNTUxOQAAACBXkiLbL/fu4tY+BbzB1Q5qstjL7qxut/mO/tVDtqzvWw
+      AAAED9zXnbYdHQxx50KrtvlFNoRScPWnrC3luTcCJcksjUQVeSItsv9+7i1j4FvMHVDmqy
+      2MvurG63+Y7+1UO2rO9bAAAAF292ZXJuaWdodG5la29AZ21haWwuY29tAQIDBAUG
+      -----END OPENSSH PRIVATE KEY-----
+    #输入前面获取的host-key
+    host-key: 
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEdiXqZEg/114514hRQdPYTMe/67abcd"
+    host-key-algorithms: 
+      - ssh-ed25519
+```
