@@ -45,18 +45,24 @@ NoBrand 提供的网络线路属于**内网专线**。根据产品线架构的�
 #### (1) 单 CM 专线产品拓扑
 流量经国内移动公网入口进入，直接走 IX 专线到达日本出口落地：
 
-$$\text{客户端} \longrightarrow \text{CM 入口} \longrightarrow \text{IX 专线} \longrightarrow \text{日本出口}$$
+```text
+客户端 ──> CM 移动公网入口 (NAT) ──> IX 专线 ──> 日本出口
+```
 
 #### (2) Dual 系产品拓扑
 Dual 架构物理机位于日本本土，配备双网卡（专线网卡与日本网卡）。根据访问方式的不同，拓扑路径如下：
 
-* **专线直出模式（走专线）**：
+* **专线直出模式（走专线）**：  
   流量经由国内 CMIX 入口打入 VPS 的“专线网卡”，再通过“日本网卡”转发流出至目标网络：
-  $$\text{客户端} \longrightarrow \text{CMIX 入口} \longrightarrow \text{专线网卡} \longrightarrow \text{日本网卡} \longrightarrow \text{目标互联网}$$
+  ```text
+  客户端 ──> CMIX 入口 ──> 专线网卡 ──> 日本网卡 ──> 目标互联网
+  ```
 
-* **直连模式（不走专线）**：
+* **直连模式（不走专线）**：  
   客户端直接连接机器的日本公网 IP（直达日本网卡），全程不经过专线网卡（过 GFW，无专线加速）：
-  $$\text{客户端} \longrightarrow \text{日本公网 IP（直连日本网卡）} \longrightarrow \text{目标互联网}$$
+  ```text
+  客户端 ──> 日本公网 IP (直连日本网卡) ──> 目标互联网
+  ```
 
 #### 产品特性对比
 
