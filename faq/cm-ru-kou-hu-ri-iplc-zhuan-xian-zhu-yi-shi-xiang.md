@@ -22,7 +22,7 @@ SS，HTTP，HTTPS，TLS，VLESS，VMESS，TROJAN，TUIC，HYSTERIA等
 
 **支持一切常见企业组网协议如：**
 
-WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L2TP，VXLAN，Tailscale等。
+Mieru，Snell（不完全），SSH隧道，WireGuard，OpenVPN，ZeroTier，Tinc，AnyConnect，FortiClient VPN，IPsec，L2TP，VXLAN，Tailscale等。
 
 **Q3：Mieru一键脚本**
 
