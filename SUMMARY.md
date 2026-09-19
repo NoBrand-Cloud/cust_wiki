@@ -8,5 +8,6 @@
   * [常见可用客户端列表](faq/chang-jian-ke-yong-ke-hu-duan-lie-biao.md)
   * [NoBrand-OneClick Mieru 新手使用教程](MIERU/README.MD)
   * [NoBrand-OneClick 端口转发使用教程](Forward/NoBrand-OneClick-Forward-Tutorial.md)
+  * [CM 专线搭配 Surge 客户端食用指南](Surge/Surge-CM-Snell-over-SSH-Tutorial.md)
 * [使用条款](Legal/README.md)
 * [NB更新日志](nb-geng-xin-ri-zhi.md)
