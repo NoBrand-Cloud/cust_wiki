@@ -2,6 +2,7 @@
 
 * [不知名的Wiki](README.md)
 * [常见问题](faq/README.md)
+  * [NoBrand专线机/DUAL机快速配置指南（SKILL）](faq/nobrand-iplc-setup.md)
   * [沪日IPLC专线注意事项](faq/cm-ru-kou-hu-ri-iplc-zhuan-xian-zhu-yi-shi-xiang.md)
   * [IX入口常见问题](faq/ix-ru-kou-chang-jian-wen-ti.md)
   * [SSH密钥登陆教程](SSH/README.MD)
